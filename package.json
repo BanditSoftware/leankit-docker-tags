@@ -1,0 +1,18 @@
+{
+  "name": "@lk/leankit-docker-tags",
+  "version": "0.0.1",
+  "private": true,
+  "license": "SEE LICENSE IN LICENSE.TXT",
+  "scripts": {
+    "build": "ncc build . -m",
+    "pretest": "npm run build",
+    "test": "jest index.test.js"
+  },
+  "devDependencies": {
+    "@actions/core": "^1.2.4",
+    "@actions/github": "^4.0.0",
+    "@zeit/ncc": "^0.22.3",
+    "eslint-config-leankit": "^5.2.0",
+    "jest": "^26.4.2"
+  }
+}

@@ -1,0 +1,10 @@
+name: "Leankit Docker Tags"
+description: "Select tags for docker images based on current branch, sha, etc"
+outputs:
+  tags:
+    description: "Array of comma separate tags with the project name"
+  plainTags:
+    description: "Array of comma separate tags without the project name"
+runs:
+  using: "node12"
+  main: "dist/index.js"
