@@ -32,8 +32,8 @@ describe( "when generating tags", () => {
 
 		it( "should ouput the correct tags", () => {
 			expect( results.slice( 0, 2 ) ).toEqual( [
-				"::set-output name=plainTags::1.4.5-1601415912.master.ed0d199",
-				"::set-output name=tags::leankit/web-test-bot:1.4.5-1601415912.master.ed0d199"
+				"::set-output name=plainTags::1.4.5-1601415912.feature-test-branch.ed0d199",
+				"::set-output name=tags::leankit/web-test-bot:1.4.5-1601415912.feature-test-branch.ed0d199"
 			] );
 		} );
 	} );
@@ -86,8 +86,8 @@ describe( "when generating tags", () => {
 
 		it( "should ouput the correct tags", () => {
 			expect( results.slice( 0, 2 ) ).toEqual( [
-				"::set-output name=plainTags::5.0.0-1601415912.master.ed0d199",
-				"::set-output name=tags::leankit/web-test-bot:5.0.0-1601415912.master.ed0d199"
+				"::set-output name=plainTags::5.0.0-1601415912.feature-test-branch.ed0d199",
+				"::set-output name=tags::leankit/web-test-bot:5.0.0-1601415912.feature-test-branch.ed0d199"
 			] );
 		} );
 	} );
