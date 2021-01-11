@@ -34,7 +34,7 @@ async function main() {
 	}
 
 	const commitDate = await exec( "git --no-pager log -1 --format='%ct'" );
-	const commitBranch = ( await exec( "git branch --show-current" ) ).replace( /[^a-zA-Z-.]/g, "-" );
+	const commitBranch = ( await exec( "git branch --show-current" ) ).replace( /[^a-zA-Z0-9-]/g, "-" );
 	const sha = await exec( "git --no-pager log -1 --format='%h'" );
 
 	const tags = [];
