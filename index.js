@@ -12,7 +12,7 @@ async function exec( ...args ) {
 }
 
 
-async function main() {
+async function main() { // eslint-disable-line max-statements
 	const workspace = process.env.GITHUB_WORKSPACE || process.cwd();
 	const { ref } = context;
 	const { repo } = context.repo;
@@ -46,9 +46,11 @@ async function main() {
 	}
 
 	const mappedTags = tags.map( tag => `leankit/${ repo }:${ tag }` );
+	const ghcrTags = tags.map( tag => `ghcr.io/banditsoftware/${ repo }:${ tag }` );
 
 	setOutput( "plainTags", tags.join( "," ) );
 	setOutput( "tags", mappedTags.join( "," ) );
+	setOutput( "ghcrTags", ghcrTags.join( "," ) );
 
 	info( `Generated tags: ${ mappedTags.join( "," ) }` );
 }

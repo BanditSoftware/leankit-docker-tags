@@ -31,9 +31,10 @@ describe( "when generating tags", () => {
 		} );
 
 		it( "should ouput the correct tags", () => {
-			expect( results.slice( 0, 2 ) ).toEqual( [
+			expect( results.slice( 0, 3 ) ).toEqual( [
 				"::set-output name=plainTags::1.4.5-1601415912.feature-test-branch-0-1-4.ed0d199",
-				"::set-output name=tags::leankit/web-test-bot:1.4.5-1601415912.feature-test-branch-0-1-4.ed0d199"
+				"::set-output name=tags::leankit/web-test-bot:1.4.5-1601415912.feature-test-branch-0-1-4.ed0d199",
+				"::set-output name=ghcrTags::ghcr.io/banditsoftware/web-test-bot:1.4.5-1601415912.feature-test-branch-0-1-4.ed0d199"
 			] );
 		} );
 	} );
@@ -58,9 +59,10 @@ describe( "when generating tags", () => {
 		} );
 
 		it( "should ouput the correct tags", () => {
-			expect( results.slice( 0, 2 ) ).toEqual( [
+			expect( results.slice( 0, 3 ) ).toEqual( [
 				"::set-output name=plainTags::1.4.5,latest",
-				"::set-output name=tags::leankit/web-test-bot:1.4.5,leankit/web-test-bot:latest"
+				"::set-output name=tags::leankit/web-test-bot:1.4.5,leankit/web-test-bot:latest",
+				"::set-output name=ghcrTags::ghcr.io/banditsoftware/web-test-bot:1.4.5,ghcr.io/banditsoftware/web-test-bot:latest"
 			] );
 		} );
 	} );
@@ -85,9 +87,10 @@ describe( "when generating tags", () => {
 		} );
 
 		it( "should ouput the correct tags", () => {
-			expect( results.slice( 0, 2 ) ).toEqual( [
+			expect( results.slice( 0, 3 ) ).toEqual( [
 				"::set-output name=plainTags::5.0.0-1601415912.feature-test-branch-0-1-4.ed0d199",
-				"::set-output name=tags::leankit/web-test-bot:5.0.0-1601415912.feature-test-branch-0-1-4.ed0d199"
+				"::set-output name=tags::leankit/web-test-bot:5.0.0-1601415912.feature-test-branch-0-1-4.ed0d199",
+				"::set-output name=ghcrTags::ghcr.io/banditsoftware/web-test-bot:5.0.0-1601415912.feature-test-branch-0-1-4.ed0d199"
 			] );
 		} );
 	} );
